@@ -126,17 +126,66 @@
 
 ## 第3章 HTTP报文内的HTTP信息
 ### 3.1 HTTP报文
+* 报文首部
+* 报文主体(不必要)
 ### 3.2 请求报文及响应报文的结构
+
+* 请求行
+    * 包含用于请求的方法，请求URI和HTTP版本。
+* 状态行
+    * 包含表明响应结果的状态码，原因短语和HTTP版本。
+* 首部字段
+    * 包含表示请求和响应的各种条件和属性的各类首部。一般有4种首部，分别是：通用首部、请求首部、响应首部和实体首部。
+* 其他
+    * 可能包含HTTP的RFC里未定义的首部（Cookie等）。
 ### 3.3 编码提升传输速率
+#### 3.3.1 报文主体和实体主体的差异
+
+#### 3.3.2 压缩传输的内容编码
+* gzip（GNU zip）
+* compress（UNIX系统的标准压缩）
+* deflate（zlib）
+* identity（不进行编码）
+
+#### 3.3.3 分割发送的分块传输编码
+* 分块传输编码（Chunked TransferCoding）。
 ### 3.4 发送多种数据的多部分对象集合
+
 ### 3.5 获取部分内容的范围请求
+``Range: bytes=-3000,5000-7000``
 ### 3.6 内容协商返回最合适的内容
+* Accept
+* Accept-Charset
+* Accept-Encoding
+* Accept-Language
+* Content-Language
+    
+    **内容协商技术**
+* 服务器驱动协商（Server-driven Negotiation）
+* 客户端驱动协商（Agent-driven Negotiation）
+* 透明协商（Transparent Negotiation）
 ## 第4章 返回结果的HTTP状态码
 ## 4.1 状态码告知从服务器端返回的请求结果
 ## 4.2 2XX成功
+* 200 OK
+* 204 No Content
+* 206 Partial Content
 ## 4.3 3XX重定向
+* 301 Moved Permanently
+* 302 Found
+* 303 See Other
+* 304 Not Modified
+* 307 Temporary Redirect
 ## 4.4 4XX客户端错误
+* 400 Bad Request
+* 401 Unauthorized
+* 403 Forbidden
+* 404 Not Found
 ## 4.5 5XX服务器错误
+
+* 500 Internal Server Error
+* 503 Service Unavailable
+
 ## 第5章 与HTTP协作的Web服务器
 ## 5.1 用单台虚拟主机实现多个域名
 ## 5.2 通信数据转发程序：代理、网关、隧道
