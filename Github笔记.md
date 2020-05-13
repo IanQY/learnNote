@@ -107,4 +107,19 @@ $ git config --global user.email "email@example.com"
     * 二者都没有不允许
 ## 添加提交以及查看状态
 
+* 查看状态
+        
+     $ git status
 
+第一步，用命令git add告诉Git，把文件添加到仓库：
+
+    $ git add readme.txt
+执行上面的命令，没有任何显示，这就对了，Unix的哲学是“没有消息就是好消息”，说明添加成功。
+
+第二步，用命令git commit告诉Git，把文件提交到仓库：
+```bash
+$ git commit -m "wrote a readme file"
+[master (root-commit) eaadf4e] wrote a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt
+ ```
