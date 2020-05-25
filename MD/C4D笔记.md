@@ -51,3 +51,4 @@
 
 ## 风扇
 * HPB
+* [风扇链接](http://www.mi.com/buy/detail?product_id=8131)
