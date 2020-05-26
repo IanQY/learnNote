@@ -127,6 +127,7 @@ $ git commit -m "wrote a readme file"
 ## 配置GitHub(SSH KEY)
 
     >ssh-keygen -t rsa -C "你的邮箱"
+
 * 运行ll ~/.ssh,可以看到有2个文件，这里记住id_rsa就是钥匙,千万不要把这个东西泄漏出去，id_rsa.pub就是锁，需要上传的是这个锁而不是钥匙。
 然后运行 cat ~/.ssh/id_rsa.pub，得到一串东西
 
