@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .card{
+      width: 250px;
+      height: 350px;
+      max-width: 750px;
+      margin: 0  auto;
+      margin-top: 50px;
+      /* padding: 100px 0; */
+    }
+    .card img{
+      position: absolute;
+      perspective: 600px;       
+      /* 透视 */
+      transition: transform .5s, z-index .5s;
+    }
+
+    .img-l{
+      opacity: 100%;
+      z-index: 1;
+      transform:perspective(600px) rotateY(0deg);      
+    }
+    .img-r{
+      z-index: 0;
+      transform: perspective(600px) rotateY(-180deg);      
+    }
+    .card:hover .img-l{
+      z-index: 0;
+      transform: rotateY(180deg);      
+    }
+    .card:hover .img-r{
+      z-index: 1;
+      transform: rotateY(0deg);      
+    }
+  </style>
+  <h1 style="text-align:center;">卡片翻转</h1>
+  <div class="card">
+    <img class="img-l" src="img/正面.jpg" alt="正面">
+    <img class="img-r" src="img/反面.jpg" alt="反面">
+  </div>
+</body>
+</html>
