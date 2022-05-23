@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工厂模式</title>
+</head>
+
+<body>
+  <style>
+    /* body *{
+      display: block;
+    } */
+    
+  </style>
+
+  <script>
+    // {
+    //   label: '名称',                    // 表单标签
+    //   type: 'input',                   // 表单类型
+    //   validator: function () {... },    // 表单验证规
+    //   rules: '必填，长度为4-16个字符',    // 填写规则提示
+    //   success: '格式正确',              // 验证通过提示
+    //   fail: '名称不能为空'               // 验证失败提示
+    // }
+    let obj1 = {
+      label: 'input', // 表单标签
+      type: 'input', // 表单类型
+      validator: function (i) {
+        if(i.length>2){
+          return true
+        }
+        return false
+      },// 表单验证规
+      rules: '必填，长度为4-16个字符',
+      // 填写规则提示
+      success: '格式正确',
+      // 验证通过提示
+      fail: '名称不能为空'
+      // 验证失败提示
+    }
+    let obj2 = {
+      label: 'textarea', // 表单标签
+      type: 'textarea', // 表单类型
+      validator: function (i) {
+        if(i.length>2){
+          return true
+        }
+        return false
+      },// 表单验证规
+      rules: '必填，长度为4-16个字符',
+      // 填写规则提示
+      success: '格式正确',
+      // 验证通过提示
+      fail: '名称不能为空'
+      // 验证失败提示
+    }
+    const creatForm = (obj) => {
+      const {label,type,validator,rules,success,fail} = obj
+      // 创建元素
+      let elem = document.createElement(label)
+      elem.type=type
+      
+      elem.placeholder= rules
+      // 事件监听
+      elem.addEventListener('blur',()=>{
+        // alert('你好')
+        if(validator(elem.value)){
+          console.log(success);
+        }else{
+          console.log(fail);
+
+        }
+        // console.log(elem.value);
+      })
+
+      //放置元素
+      document.body.append(elem);
+
+      // console.log(label);
+      // return label
+    }
+    let a1 = creatForm(obj1)
+    let a2 = creatForm(obj2)
+    
+  </script>
+</body>
+
+</html>
