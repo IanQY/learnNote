@@ -123,6 +123,7 @@ $ git commit -m "wrote a readme file"
  1 file changed, 2 insertions(+)
  create mode 100644 readme.txt
  ```
+* -m 后面的参数是对这次提交的概述
 
 ## 配置GitHub(SSH KEY)
 
@@ -131,3 +132,22 @@ $ git commit -m "wrote a readme file"
 * 运行ll ~/.ssh,可以看到有2个文件，这里记住id_rsa就是钥匙,千万不要把这个东西泄漏出去，id_rsa.pub就是锁，需要上传的是这个锁而不是钥匙。
 然后运行 cat ~/.ssh/id_rsa.pub，得到一串东西
 
+
+## 查看提交日志
+    git log
+    git log --pretty=short
+    git log -p
+      
+    git diff
+
+## 分支的操作
+* 显示分支
+
+      git branch
+* 切换分支
+
+      git checkout
+      git checkout - 
+* 合并分支
+
+      git merge

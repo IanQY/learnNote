@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_相关问题</title>
+</head>
+<body>
+  <!--
+     1.undefined与null的区别？
+      *undefined定义未赋值
+      （undefined ，和 null 一样是一个特殊的关键字，undefined 表示变量未赋值时的属性。)
+      *null定义并赋值，值为null
+      (null ， 一个表明 null 值的特殊关键字。 JavaScript 是大小写敏感的，因此 null 与 Null、NULL或变体完全不同。)
+     2.什么时候给变量赋值为null？
+      *初始赋值，表明将要赋值对象
+      *结束前，让对象成为垃圾对象（被垃圾回收期回收）
+     3.严格区别变量类型与数据类型？
+      *数据的类型
+        *基本类型
+        *对象类型
+      *变量的类型(变量内存值的类型)
+        *基本类型：保存基本类型的数据
+        *引用类型：保存的是地址值
+   -->
+
+   <script>
+     //实例：实例对象
+     //类型：类型对象
+
+     function Person (name,age){//构造函数 类型
+       this.name = name;
+       this.age = age;
+     }
+
+     var p = new Person("Ian",27);//实例对象
+
+     let a;
+     console.log(a);
+     a = null;
+     console.log(a);
+
+
+     //起始
+     var b = null;
+     b = ['it',12];
+     b = null;//让b指向的对象成为垃圾对象（回收）
+     //值 null 是一个字面量，不像 undefined，它不是全局对象的一个属性。null 是表示缺少的标识，指示变量未指向任何对象。把 null 作为尚未创建的对象，也许更好理解。在 API 中，null 常在返回类型应是一个对象，但没有关联的值的地方使用。
+
+
+     var c = function(){};
+     console.log(typeof c);
+
+   </script>
+  
+</body>
+</html>

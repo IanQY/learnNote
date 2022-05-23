@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>菜单动画</title>
+</head>
+
+<body>
+  <style>
+    
+    h1{
+      margin: 0;
+    }
+    button{
+      padding: 2px 15px;
+      margin-top: 15px;
+    }
+    .container{
+      width: 750px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .clk h1{
+      color: skyblue;
+      transition: color 0.6s;   
+    }
+
+    .line {
+      height: 5px;
+      width: 0;
+      margin: 0 auto;
+      background-color: skyblue; 
+      transition: width 0.6s;   
+    }
+    .clk .line{
+      width: 140px;
+    }
+  </style>
+  <div class="container" id="demo">
+    <h1>前端学院</h1>
+    <div class="line"></div>
+    <button>切换样式</button>
+  </div>
+  <script>
+    const v1 = document.querySelector('#demo') //获取容器
+    const btn = document.querySelectorAll('button') //获取按钮
+
+    let isAdd = false //按钮状态
+    btn[0].addEventListener('click', () => {
+      if (isAdd) {
+        v1.classList.remove('clk')
+        isAdd = !isAdd
+      } else {
+        v1.classList.add('clk')
+        isAdd = !isAdd
+      }
+    })
+  </script>
+</body>
+
+</html>

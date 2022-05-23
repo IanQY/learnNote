@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2d变形</title>
+</head>
+
+<body>
+  <style>
+    .ctn {
+      display: flex;
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .ctn div{
+      margin-right: 60px;
+    }
+
+    .box {
+      width: 60px;
+      height: 68px;
+      border: 1px solid #ebebeb;
+      background-color: #f7f6f6;
+      text-align: center;
+      line-height: 68px;
+    }
+    .box1{
+      transform: skewX(30deg);
+      /* 向左倾斜30度 */
+    }
+    .box2{
+      transform: scaleX(.5);
+      /* 压缩2倍 */
+    }
+    .box3{
+      transform: rotate(45deg);
+      /* 旋转45度 */
+    }
+    .box4{
+      transform: translate(10px,20px);
+      /* x轴位移10px y轴位移20px */
+    }
+    .box5{
+      transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);
+      /* 同时包含上述属性 */
+    }
+  </style>
+  <div class="ctn">
+    <div class="box">box0</div>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box box5">box5</div>
+  </div>
+</body>
+
+</html>
