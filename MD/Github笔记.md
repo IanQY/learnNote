@@ -70,10 +70,23 @@ $ git config --global user.email "email@example.com"
 * 作用:区分不同开发人员的身份
 
 * 辨析:这里设置的签名和登录远程库(代码托管中心)的账号、密码没有任何关系。
+
 * 命令
-*   * 项目级别/仓库级别:仅在当前本地库范围内有效
+	
+  
+  * 列出当前配置`git config --list`
+  	
+  * 列出repository配置`git config --local --list`
+  	
+  * 列出全局配置`git config --global --list
+  	
+  * 列出系统配置`git config --system --list
+  	
+  * 项目级别/仓库级别:仅在当前本地库范围内有效
         * >git config
-        * 信息保存位置： ./git/config 文件
+          
+  
+            * 信息保存位置： ./git/config 文件
         ```bash
         $ cat .git/config
         [core]
@@ -85,9 +98,10 @@ $ git config --global user.email "email@example.com"
                 ignorecase = true
         [user]
                 name = Ian
-                email = ian@email.com
-
+            email = ian@email.com
         ```
+  
+
 
 
         ```bash
@@ -95,14 +109,14 @@ $ git config --global user.email "email@example.com"
         [user]
             name = Ian
             email = ian@email.com
-
+    
         ```
-        
+
 
     * 系统用户级别:登录当前操作系统的用户范围级别优先级
         * >git config --global
     * 就近原则: 项目级别优先于系统用户级别，二者都有时采用项目级别的签名
-
+    
     * 如果只有系统用户级别的签名，就以系统用户级别的签名为准
     * 二者都没有不允许
 ## 添加提交以及查看状态
@@ -122,7 +136,7 @@ $ git commit -m "wrote a readme file"
 [master (root-commit) eaadf4e] wrote a readme file
  1 file changed, 2 insertions(+)
  create mode 100644 readme.txt
- ```
+```
 * -m 后面的参数是对这次提交的概述
 
 ## 配置GitHub(SSH KEY)
