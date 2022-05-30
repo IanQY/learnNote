@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      min-width: 550px;
+    }
+    
+    .header,
+    .footer {
+      height: 100px;
+      background: lightgray;
+      color: #000;
+    }
+    /* .footer{
+      clear: both;
+    } */
+    
+
+    .main {
+      /* height: 400px; */
+      max-width: 1280px;
+      padding-left: 200px;
+      padding-right: 150px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      background-color: lightgray;
+    }
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+      height:0;
+      visibility:hidden
+    }
+    /* 清除浮动 解决塌陷 */
+
+    
+   .col {
+      position: relative;
+      float: left;
+      height: 400px;
+      text-align: center;
+    }
+
+    .center {
+      width: 100%;
+      background-color: lightcoral;
+    }
+
+    .left {
+      width: 200px;
+      /* left: -200px; */
+      right: 200px;
+      margin-left: -100%;
+      background-color: lightcyan;
+    }
+    
+    .right {
+      width: 150px;
+      right: -150px;
+      margin-left: -150px;
+      background-color: lightgreen;
+    }
+
+    
+  </style>
+  <div class="header">header</div>
+  <div id="container" class="main clearfix">
+    <div class="center col">我是中间</div>
+    <div class="left col">我是左边</div>
+    <div class="right col">我是右边</div>
+  </div>
+  <div class="footer">footer</div>
+</body>
+
+</html>

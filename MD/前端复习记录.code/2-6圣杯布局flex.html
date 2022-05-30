@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      min-width: 550px;
+    }
+
+    .header,
+    .footer {
+      height: 100px;
+      background: lightgray;
+      color: #000;
+    }
+    /* .footer{
+      clear: both;
+    } */
+
+    .main {
+      display: flex;
+      max-width: 1280px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      background-color: lightgray;
+    }
+
+   
+
+   .col {
+      position: relative;
+      height: 400px;
+      /* line-height: 400px; */
+      text-align: center;
+    }
+
+    .center {
+      flex: 1;
+      background-color: lightcoral;
+    }
+
+    .left {
+      width: 200px;      
+      background-color: lightcyan;
+    }
+    
+    .right {
+      width: 150px;      
+      background-color: lightgreen;
+    }
+    
+  </style>
+  <div class="header">header</div>
+  <div id="container" class="main">
+    <div class="left col">我是左边</div>
+    <div class="center col">我是中间</div>
+    <div class="right col">我是右边</div>
+  </div>
+  <div class="footer">footer</div>
+</body>
+
+</html>
