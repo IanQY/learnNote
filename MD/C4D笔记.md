@@ -86,3 +86,5 @@
 ## 轮胎
 
 * 倒角->斜角（均匀）
+
+![Polygon Modeling Tables for 3D Artists](E:\Q\_learn\_a01\learnNote\MD\C4D\Polygon Modeling Tables for 3D Artists.png)
